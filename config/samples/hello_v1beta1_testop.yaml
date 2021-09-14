@@ -1,0 +1,7 @@
+apiVersion: hello.example.com/v1beta1
+kind: TestOp
+metadata:
+  name: testop-sample
+spec:
+  # Add fields here
+  image: okteto/go-getting-started

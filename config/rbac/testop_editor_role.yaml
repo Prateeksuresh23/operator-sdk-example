@@ -1,0 +1,24 @@
+# permissions for end users to edit testops.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: testop-editor-role
+rules:
+- apiGroups:
+  - hello.example.com
+  resources:
+  - testops
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - hello.example.com
+  resources:
+  - testops/status
+  verbs:
+  - get
